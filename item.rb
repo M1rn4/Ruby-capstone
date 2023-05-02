@@ -18,14 +18,15 @@ class Item
     difference_in_days = (now - before).to_i
     
     years=(difference_in_days/365.25).to_i
-    if (years>10)
-      @archive = true
+    if years > 10
+      true
     else
-      @archive = false  
+      false
     end
   end
 
   def move_to_archive
+    @archive = true if can_be_archive? == true
   end
 
 
