@@ -1,7 +1,7 @@
 require 'date'
 
 class Item
-  def initialize(id, options**) 
+  def initialize(id, **options)
     @id = id
     @genre = options[genre]
     @author = options[author]
