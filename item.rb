@@ -1,33 +1,26 @@
 require 'date'
 
-class Item 
-  
-  def initialize(id,genre,author,source,label,date,archive)
-     @id = id
-     @genre= genre
-     @author=author
-     @source=source
-     @label=label
-     @publish_date= date
-     @archive=archive
+class Item
+  def initialize(id, options**) 
+    @id = id
+    @genre = options[genre]
+    @author = options[author]
+    @source = options[source]
+    @label = options[label]
+    @publish_date = options[date]
+    @archive = options[archive]
   end
-  
+
   def can_be_archive?
     now = Date.today
     before = Date.parse(@publish_date)
     difference_in_days = (now - before).to_i
-    
-    years=(difference_in_days/365.25).to_i
-    if years > 10
-      true
-    else
-      false
-    end
+
+    years = (difference_in_days / 365.25).to_i
+    years > 10
   end
 
   def move_to_archive
     @archive = true if can_be_archive? == true
   end
-
-
 end
