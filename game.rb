@@ -14,12 +14,7 @@ class Game < Item
     now = Date.today
     before = Date.parse(@last_played_at)
     difference_in_days = (now - before).to_i
-    
-    if (super && difference_in_days > 2*year_days)
-      return true
-    else
-      false  
-    end
 
+    super && difference_in_days > 2 * year_days
   end
 end

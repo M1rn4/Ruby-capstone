@@ -3,7 +3,7 @@ require 'date'
 class Item
   attr_accessor :author
 
-  def initialize (**options)    
+  def initialize(**options)
     @id = options['id']
     @genre = options['genre']
     @author = options['author']

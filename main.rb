@@ -12,30 +12,7 @@ class Main
     puts ''
     puts "You choose option #{selected}"
     return unless selected != 13
-
-    #run
-
-    multiplayer = '4 persons'
-    last_played_at = '2020/05/03'
-
-    options = { 'id' => 1, 'genre' => 'action',
-     'author' => 'John', 'source' => 'source-1',
-     'label' => 'label-1','publish_date'=> '2010/05/03',
-     'archive' => false
-     }
-    game = Game.new(multiplayer,last_played_at,**options)
-    
-    puts 'here ok ',game.can_be_archive?
-    id=1
-    first_name = 'peter'
-    last_name = 'smith'
-    pet=Author.new(id, first_name, last_name )
-
-    pet.add_item(game)
-
-    puts game.author.first_name
-    
-  
+    run
   end
 end
 
