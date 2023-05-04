@@ -1,5 +1,4 @@
 class App
-
   def initialize
     @books = []
     @music_album = []
@@ -17,14 +16,12 @@ class App
       6 => :List_all_authors,
       7 => :Add_book,
       8 => :Add_music_album,
-      9 => :Add_game,
+      9 => :Add_game
     }
-    self.send(options[selected])
+    send(options[selected])
   end
 
   def list_all_games
     puts 'call list_all_games'
   end
-
-
 end
