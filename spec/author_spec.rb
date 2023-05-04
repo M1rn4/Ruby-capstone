@@ -4,9 +4,24 @@ require './author'
 describe Author do
   context 'Testing class Author' do
     it 'should create a Author class' do
-      options = { 'id' => 1, 'genre' => 'action',
-                  'author' => 'John', 'source' => 'source-1',
-                  'label' => 'label-1', 'publish_date' => '2010/05/03',
+
+
+      genre = double('genre') 
+      allow(genre).to receive(:name) { 'Action'} 
+
+      author = double('author') 
+      allow(author).to receive(:name) { 'John'} 
+
+      source = double('source') 
+      allow(source).to receive(:name) { 'source-1'} 
+
+      label = double('label') 
+      allow(label).to receive(:name) { 'label-1'} 
+
+
+      options = { 'id' => 1, 'genre' => :genre,
+                  'author' => :author, 'source' => :source,
+                  'label' => :label, 'publish_date' => '2010/05/03',
                   'archive' => false }
 
       multiplayer = '4 persons'
