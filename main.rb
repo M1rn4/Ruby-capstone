@@ -1,5 +1,6 @@
 require './menu'
 require './game'
+require './author'
 class Main
   def initialize
     puts 'Welcome to our catalog!'
@@ -25,6 +26,14 @@ class Main
     game = Game.new(multiplayer,last_played_at,**options)
     
     puts 'here ok ',game.can_be_archive?
+    id=1
+    first_name = 'peter'
+    last_name = 'smith'
+    pet=Author.new(id, first_name, last_name )
+
+    pet.add_item(game)
+
+    puts game.author.first_name
     
   
   end

@@ -1,6 +1,9 @@
 class Author
    
+  attr_accessor :first_name, :last_name, :id
+
   def initialize(id, first_name, last_name )
+
     
     @id = id
     @first_name = first_name
