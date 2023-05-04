@@ -12,6 +12,7 @@ class Main
     puts ''
     puts "You choose option #{selected}"
     return unless selected != 13
+
     run
   end
 end
