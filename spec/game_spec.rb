@@ -39,12 +39,6 @@ describe Game do
       game = Game.new(multiplayer,last_played_at,**options)
       expect(game.can_be_archive?).to eq(false)
 
-
-
-
-
-
-
     
     end
   end

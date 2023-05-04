@@ -29,12 +29,6 @@ describe Author do
       expect(game.author.id).to eq(1)
       expect(game.author.first_name).to eq('peter')
       expect(game.author.last_name).to eq('smith')
-      
-
-
-
-
-
 
     
     end
