@@ -15,12 +15,8 @@ class Main
     puts ''
     puts "You choose option #{selected}"
 
-    if selected == 10
-      @app.run_option(selected)      
-      return
-    else
-      @app.run_option(selected)
-    end
+    @app.run_option(selected)
+    return if selected == 10
 
     run
   end

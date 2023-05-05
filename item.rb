@@ -13,7 +13,7 @@ class Item
     @archive = options['archive']
   end
 
-  def can_be_archive?
+  def can_be_archived?
     year_days = 365.25
     now = Date.today
     before = Date.parse(@publish_date)
@@ -22,6 +22,6 @@ class Item
   end
 
   def move_to_archive
-    @archive = true if can_be_archive? == true
+    @archive = true if can_be_archived? == true
   end
 end

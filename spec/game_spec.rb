@@ -23,11 +23,11 @@ describe Game do
 
       expect(game.last_played_at).to eq('2020/05/03')
       expect(game.multiplayer).to eq('4 persons')
-      expect(game.can_be_archive?).to eq(true)
+      expect(game.can_be_archived?).to eq(true)
 
       last_played_at = '2022/05/03'
       game = Game.new(multiplayer, last_played_at, **options)
-      expect(game.can_be_archive?).to eq(false)
+      expect(game.can_be_archived?).to eq(false)
 
       options = { 'id' => 1, 'genre' => :genre,
                   'author' => :author, 'source' => :source,
@@ -36,7 +36,7 @@ describe Game do
 
       last_played_at = '2022/05/03'
       game = Game.new(multiplayer, last_played_at, **options)
-      expect(game.can_be_archive?).to eq(false)
+      expect(game.can_be_archived?).to eq(false)
     end
   end
 end
