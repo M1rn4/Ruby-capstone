@@ -1,7 +1,9 @@
+require './app_mirna'
 require './menu'
 class Main
   def initialize
     puts 'Welcome to our catalog!'
+    @app = App.new
   end
 
   def run
@@ -9,9 +11,11 @@ class Main
     selected = gets.chomp.to_i
     puts ''
     puts "You choose option #{selected}"
-    return unless selected != 13
-
-    run
+    if selected != 13
+      @app.run_option(selected)
+      run
+    end
+    
   end
 end
 
