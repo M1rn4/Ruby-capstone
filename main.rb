@@ -1,6 +1,11 @@
 require './menu'
+require './game'
+require './author'
+require './app'
 class Main
   def initialize
+    @app = App.new
+    @app.load_game
     puts 'Welcome to our catalog!'
   end
 
@@ -9,7 +14,9 @@ class Main
     selected = gets.chomp.to_i
     puts ''
     puts "You choose option #{selected}"
-    return unless selected != 13
+
+    @app.run_option(selected)
+    return if selected == 10
 
     run
   end
