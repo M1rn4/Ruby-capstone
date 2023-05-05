@@ -49,43 +49,9 @@ class App
   end
 
   def add_game
-    id = Random.rand(1..1000)
+    options = create_options
+
     print 'Enter Genre name: '
-    genre_name = gets.chomp
-    # genre =  Genre.new(id,genre_name)
-    genre = genre_name
-    @genres.push(genre)
-
-    print 'Enter author first name: '
-    first_name = gets.chomp
-
-    print 'Enter author last name: '
-    last_name = gets.chomp
-
-    author = Author.new(id, first_name, last_name)
-    @authors.push(author)
-
-    print 'Enter source: '
-    source = gets.chomp
-    @sources.push(source)
-
-    print 'Enter label title: '
-    title = gets.chomp
-
-    print 'Enter label color: '
-    color = gets.chomp
-
-    # label = Label.new(id, title, color)
-    label = 'label-1'
-    @labels.push(label)
-
-    print 'Enter publish_date: '
-    publish_date = gets.chomp
-
-    options = { 'id' => id, 'genre' => genre,
-                'author' => :author, 'source' => source,
-                'label' => label, 'publish_date' => publish_date,
-                'archive' => false }
 
     print 'Enter multiplayer: '
     multiplayer = gets.chomp
@@ -146,5 +112,42 @@ class App
 
       @games.push(game_b)
     end
+  end
+
+  def create_options
+    id = Random.rand(1..1000)
+    genre_name = gets.chomp
+    # genre =  Genre.new(id,genre_name)
+    genre = genre_name
+    @genres.push(genre)
+
+    print 'Enter author first name: '
+    first_name = gets.chomp
+
+    print 'Enter author last name: '
+    last_name = gets.chomp
+
+    author = Author.new(id, first_name, last_name)
+    @authors.push(author)
+
+    print 'Enter source: '
+    source = gets.chomp
+    @sources.push(source)
+
+    # print 'Enter label title: '
+    # title = gets.chomp
+
+    # print 'Enter label color: '
+    # color = gets.chomp
+
+    # label = Label.new(id, title, color)
+    label = 'label-1'
+    @labels.push(label)
+
+    print 'Enter publish_date: '
+    publish_date = gets.chomp
+
+    { 'id' => id, 'genre' => genre, 'author' => :author, 'source' => source, 'label' => label,
+      'publish_date' => publish_date, 'archive' => false }
   end
 end
