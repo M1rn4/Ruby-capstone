@@ -1,7 +1,7 @@
 require 'date'
 
 class Item
-  attr_accessor :author
+  attr_accessor :id, :genre, :author, :source, :label, :publish_date, :archive
 
   def initialize(**options)
     @id = options['id']

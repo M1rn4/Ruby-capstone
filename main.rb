@@ -5,6 +5,7 @@ require './app'
 class Main
   def initialize
     @app = App.new
+    @app.load_game
     puts 'Welcome to our catalog!'
   end
 
@@ -14,9 +15,12 @@ class Main
     puts ''
     puts "You choose option #{selected}"
 
-    return unless selected != 10
-
-    @app.run_option(selected)
+    if selected == 10
+      @app.run_option(selected)      
+      return
+    else
+      @app.run_option(selected)
+    end
 
     run
   end
