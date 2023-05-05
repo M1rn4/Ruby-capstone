@@ -1,14 +1,15 @@
 require 'date'
-
 class Item
-  def initialize(id, **options)
-    @id = id
-    @genre = options[genre]
-    @author = options[author]
-    @source = options[source]
-    @label = options[label]
-    @publish_date = options[date]
-    @archive = options[archive]
+  attr_accessor :id, :genre, :author, :source, :label, :publish_date, :archive
+
+  def initialize(**options)
+    @id = options[:id]
+    @genre = options[:genre]
+    @author = options[:author]
+    @source = options[:source]
+    @label = options[:label]
+    @publish_date = options[:publish_date]
+    @archive = options[:archive]
   end
 
   def can_be_archive?
