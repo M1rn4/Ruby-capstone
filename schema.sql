@@ -2,14 +2,33 @@ CREATE DATABASE catalog;
 
 CREATE TABLE books(
    id serial PRIMARY KEY,
-   genre VARCHAR(255) NOT NULL,
-   author VARCHAR(255) NOT NULL,
-   source VARCHAR(255) NOT NULL,
-   label VARCHAR(255) NOT NULL,
+   genre_id    INT references genre(id),
+   author_id   INT references author(id),
+   source_id   INT references source(id),
+   label_id   INT references label(id),
    publish_date DATE NOT NULL,
    archived BOOL NOT NULL,
    publisher VARCHAR(255) NOT NULL,
-   cover_state VARCHAR(255) NOT NULL
+   cover_state VARCHAR(255) NOT NULL,
+   CONSTRAINT fk_genre
+      FOREIGN KEY(genre_id)
+         REFERENCES genre(id)
+         ON DELETE SET NULL,
+
+   CONSTRAINT fk_author
+      FOREIGN KEY(author_id)
+         REFERENCES author(id)
+         ON DELETE SET NULL,
+
+   CONSTRAINT fk_source
+      FOREIGN KEY(source_id)
+         REFERENCES source(id)
+         ON DELETE SET NULL,
+
+   CONSTRAINT fk_label
+      FOREIGN KEY(label_id)
+         REFERENCES label(id)
+         ON DELETE SET NULL,
 );
 
 CREATE TABLE labels(

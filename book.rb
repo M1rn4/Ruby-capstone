@@ -1,7 +1,7 @@
 require './item'
 class Book < Item
-  def initialize(id, publisher, cover_state, **options)
-    super(id, **options)
+  def initialize(publisher, cover_state, **options)
+    super(**options)
     @publisher = publisher
     @cover_state = cover_state
   end
