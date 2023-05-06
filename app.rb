@@ -3,10 +3,12 @@ require './label'
 require './book'
 require './game'
 require './utilities'
+require './save_util'
 require 'json'
 
 class App
   include Utilities
+  include SaveUtil
   def initialize
     @books = []
     @music_album = []
@@ -52,7 +54,6 @@ class App
 
   def add_game
     options = create_options
-    print 'Enter Genre name: '
     print 'Enter multiplayer: '
     multiplayer = gets.chomp
     print 'Enter last played at: '
