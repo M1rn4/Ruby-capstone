@@ -1,35 +1,17 @@
-require_relative 'item'
-
+require './item'
 class MusicAlbum < Item
-  attr_accessor :title, :genre, :publish_date, :on_spotify, :artist
+  attr_accessor :on_spotify
 
-  def initialize(id: nil, title: nil, genre: nil, publish_date: nil, on_spotify: nil, artist: nil)
-    super(id: id, title: title, genre: genre, publish_date: publish_date, on_spotify: on_spotify, artist: artist)
-    
-    @id = id
-    @title = title
-    @genre = genre
-    @publish_date = publish_date
+  def initialize(on_spotify, id = Random.rand(1..1000), **options)
+    super(**options)
     @on_spotify = on_spotify
-    @artist = artist
-  end
-
-  def to_json(*args)
-    {
-      title: @title,
-      artist: @artist,
-      genre: @genre,
-      publish_date: @publish_date,
-      on_spotify: @on_spotify
-    }.to_json(*args)
   end
 
   def can_be_archived?
-    now = Date.today
-    before = Date.parse(@publish_date)
-    difference_in_days = (now - before).to_i
-
-    years = (difference_in_days / 365.25).to_i
-    years > 10 && !@on_spotify
+    if super() || @on_spotify == true
+      true
+    else
+      false
+    end
   end
 end

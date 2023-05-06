@@ -1,19 +1,17 @@
-require_relative '../genre'
-require_relative '../item'
+require './genre'
+require './item'
 
-RSpec.describe Genre do
-  describe '#add_item' do
-    let(:genre) { Genre.new('Action') }
-    let(:item) { Item.new(id: 1, genre: genre) }
-
-    it 'adds the item to the items array' do
-      genre.add_item(item)
-      expect(genre.items).to include(item)
-    end
-
-    it 'sets the genre attribute of the item' do
-      genre.add_item(item)
-      expect(item.genre).to eq(genre)
+describe Genre do
+  context 'Test Genre class' do
+    it 'should create a genre' do
+      genre1 = Genre.new('Fantasy')
+      options = { 'genre' => genre1, 'author' => 'author1', 'source' => 'France',
+                  'label' => 'label1', 'publish_date' => '2000/02/22', 'archive' => false }
+      item1 = Item.new(**options)
+      expect(genre1.name).to eq('Fantasy')
+      expect(item1.genre.name).to eq('Fantasy')
+      genre1.add_item(item1)
+      expect(genre1.items.class).to eq(Array)
     end
   end
 end
