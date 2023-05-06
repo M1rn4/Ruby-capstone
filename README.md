@@ -1,93 +1,95 @@
-# Ruby Capstone
-In this project, we will build ..
 <a name="readme-top"></a>
+
+<div align="center">
+
+  <img src="https://user-images.githubusercontent.com/65084923/231513445-05c342c5-a239-46b8-bcb8-78d3cd89421d.png" alt="logo" width="100"  height="auto" />
+  <img src="https://user-images.githubusercontent.com/65084923/231513552-358a0a7b-a152-4f5b-806e-c8a09f2c269b.png" alt="logo" width="100"  height="auto" />
+  <br/>
+  <img src="https://user-images.githubusercontent.com/65084923/220200035-01fa5e08-af6a-495b-b597-55157a2b7d95.gif" alt="logo" />
+  <br/>
+
+<h3><b>Catalog of my things</b></h3>
+
+</div>
 
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Author](#author)
+  - [Available Scripts](#available-scripts)
+  - [Clone](#clone)
+- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 OOP school library <a name="about-project"></a>
+# 📖 Catalog of my things
 
-**Ruby Capstone** In this project,...
+> The app is developed with Ruby.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Build With</summary>
+  <summary>Client</summary>
   <ul>
-    <li><a href="">Ruby</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby</a></li>
   </ul>
 </details>
 
+<!-- Features -->
+
 ### Key Features <a name="key-features"></a>
 
-
+- List all books.
+- List all music albums.
+- List all movies
+- List of games
+- List all genres (e.g 'Comedy', 'Thriller')
+- List all labels (e.g. 'Gift', 'New')
+- List all authors (e.g. 'Stephen King')
+- List all sources (e.g. 'From a friend', 'Online shop')
+- Add a book
+- Add a music album
+- Add a movie
+- Add a game
+- Data is saved in json files
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-<!-- > Describe how a new developer could make use of your project. -->
+To get a local copy up and use as a template, follow these steps.
 
-To get a local copy up and running, follow these steps.
-
-### Prerequisites
-
-In order to run this project you need:
-
-### Setup
+### Clone <a name="clone"></a>
 
 Clone this repository to your desired folder:
 
 ```sh
-  cd my-folder
   git clone https://github.com/M1rn4/Ruby-capstone.git
 ```
 
-### Install
+To install the necessary dependencies, you should run:
 
-Install this project with:
+### `gem install bundler`
 
-```
-  cd Ruby-capstone
-  bundle install
-```
+### `bundler install`
 
-### Usage
+## 🤖 Available Scripts <a name="available-scripts"></a>
 
-To run the project, execute the following command:
+In the project directory, you can run:
 
-```
-ruby main.rb
-```
+### `rubocop -A`
 
-### Run tests
-
-To run tests, run the following command:
-
-```
- ruby -I test
-```
-### Deployment
-no need for deplyyment 
+To fix all Linter error automatically
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
