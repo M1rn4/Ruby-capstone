@@ -1,4 +1,3 @@
-require './app_mirna'
 require './menu'
 require './game'
 require './author'
@@ -8,7 +7,6 @@ class Main
     @app = App.new
     @app.load_data
     puts 'Welcome to our catalog!'
-    @app = App.new
   end
 
   def run

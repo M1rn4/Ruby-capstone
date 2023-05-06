@@ -26,7 +26,6 @@ module Utilities
   end
 
   def list_games(games)
-    p games
     puts 'Games'
     games.each do |game|
       puts "id: #{game.id}"
