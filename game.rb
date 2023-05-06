@@ -9,7 +9,7 @@ class Game < Item
     super(**options)
   end
 
-  def can_be_archive?
+  def can_be_archived?
     year_days = 365.25
     now = Date.today
     before = Date.parse(@last_played_at)

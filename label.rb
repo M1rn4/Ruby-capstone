@@ -1,5 +1,5 @@
 class Label
-  attr_accessor :title
+  attr_accessor :id, :title, :color
   attr_reader :items
 
   def initialize(title, color, id = Random.rand(1..1000))
